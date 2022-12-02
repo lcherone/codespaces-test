@@ -20,6 +20,3 @@ sudo apachectl start
 # Download Adminer
 sudo rm -f /var/www/html/index.html
 sudo wget --no-check-certificate https://www.adminer.org/static/download/4.8.1/adminer-4.8.1.php -O /var/www/html/index.php
-
-# Add ssh key for usage.
-# echo "$SSH_KEY" > /home/vscode/.ssh/id_rsa && chmod 600 /home/vscode/.ssh/id_rsa
