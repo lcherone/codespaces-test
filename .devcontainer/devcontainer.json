@@ -1,0 +1,40 @@
+{
+  //"image": "mcr.microsoft.com/devcontainers/universal:2",
+  "build": {
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick an Debian version: bullseye, buster, stretch
+		"args": { "VARIANT": "buster" }
+	},
+  "hostRequirements": {
+    "cpus": 4
+  },
+  "remoteUser": "root",
+  "containerUser": "root",
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "npm install",
+  // "postCreateCommand": "",
+  "postStartCommand": "bash .devcontainer/init-codespace.sh",
+  // "postAttachCommand": {
+  //   "server": "npm start"
+  // },
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md"
+      ]
+    }
+  },
+  "portsAttributes": {
+    "8080": {
+      "label": "Application",
+      "onAutoForward": "openPreview"
+    },
+    "8000": {
+      "label": "Apache2 (Adminer)",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "forwardPorts": [
+    8080, 8000
+  ]
+}
