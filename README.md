@@ -8,7 +8,8 @@ Express app is an example.
 
 ### Setup
 
-Once installed into a codespace, run `npm start`.
+Once installed into a codespace *(this can take a while)*, run `npm start`.
+
 To manage the database with Adminer, view the ports tab in the editor then open the local address link for Apache2 (Adminer)(8000) in your browser.
 
 
