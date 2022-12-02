@@ -8,7 +8,8 @@
     }
   },
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {}
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers-contrib/features/vue-cli:1": {}
   },
   "hostRequirements": {
     "cpus": 2
@@ -18,6 +19,7 @@
   "waitFor": "onCreateCommand",
   "updateContentCommand": "npm install",
   // "postCreateCommand": "",
+  "postCreateCommand": ". ${NVM_DIR}/nvm.sh && nvm install --lts",
   "postStartCommand": "bash .devcontainer/init-codespace.sh",
   // "postAttachCommand": {
   //   "server": "npm start"
